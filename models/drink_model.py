@@ -51,3 +51,9 @@ class Drinks:
     @qty.setter
     def qty(self, value):
         self.qty = value
+
+
+
+class Supplies:
+    def __init__(self, id_supplie, name_supp, description_supp, qty_supp):
+        pass

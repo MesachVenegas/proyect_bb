@@ -43,3 +43,9 @@ class Connection:
         free : Connection.make_pool().putconn(conexion)
         logger.info(f"{cls._pool} Liberado")
         return free
+
+    # Cierra el pool de conexiones.
+    @classmethod
+    def finish_pool(cls):
+        Connection.make_pool().closeall()
+        logger.info(f"{cls._pool} Cerrado")

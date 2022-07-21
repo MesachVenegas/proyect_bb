@@ -36,3 +36,10 @@ class Connection:
     def pool_connexion(cls):
         connection = Connection.make_pool().getconn()
         return connection
+
+    # Libera la conexion para devolverla al pool de conexiones.
+    @classmethod
+    def free_pool(cls, conexion):
+        free : Connection.make_pool().putconn(conexion)
+        logger.info(f"{cls._pool} Liberado")
+        return free

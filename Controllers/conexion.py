@@ -30,3 +30,9 @@ class Connection:
                 sys.exit()
         else:
             return cls._pool
+
+    # Crea y regesa un objeto de conexion.
+    @classmethod
+    def pool_connexion(cls):
+        connection = Connection.make_pool().getconn()
+        return connection

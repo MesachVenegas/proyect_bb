@@ -9,4 +9,4 @@ class ManagerItem:
 
     @classmethod
     def add_item(cls):
-        no
+        pass
